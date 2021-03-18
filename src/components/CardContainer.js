@@ -4,7 +4,7 @@ import ChampionCard from "./ChampionCard"
 function CardContainer({filteredChamps}) {
     const championList = filteredChamps.map((champ)=>{
         return( <ChampionCard 
-                key={champ.clip}
+                key={champ.id}
                 id ={champ.id}
                 name ={champ.name}
                 bio={champ.bio}

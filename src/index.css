@@ -1,6 +1,5 @@
-
 .app-container{
-  background-color: rgb(176, 179, 33);
+  background: black;
 }
 
 .header-container {
@@ -8,43 +7,86 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  background: linear-gradient(to bottom, #080808 0%, rgb(10, 84, 180) 102%);
+  background: linear-gradient(to bottom, #080808 0%, rgb(190, 197, 206) 102%);
 } 
 
 
 .nav-link {
-  color: rgb(14, 219, 226); 
+  color: rgb(0, 0, 0); 
   font-family: "Fredoka One";
   font-size: 25px;
-  text-shadow: 2px 2px #10b2c7;
+  text-shadow: 2px 2px #1a9acc;
   display: inline-block;
   margin: 1rem;
   padding: 1rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: black;
   cursor: pointer;
 }
+
+.login {
+  position: absolute;
+  display: block;
+  background: url(https://64.media.tumblr.com/5e4b16b9ee6449bb16fddc9099e5bbb5/tumblr_phm1k53y8L1tbrdouo1_500.gifv);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  
+}
+
+
+.login-form-box {
+  position: relative;
+  display: block;
+  border: 5px solid rgba(53, 9, 212, 0.986);
+  height: 30%;
+  width: 30%;
+  margin: 0 auto;
+  top: 25%;
+  text-align: center;
+  color: rgb(219, 214, 218);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+  margin-top: 4px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: larger;
+}
+
+
+
 
 .card-container {
   display: grid;
   justify-content: space-between;
   align-items: center;
-  grid-template-columns: auto auto auto auto ;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
   margin-top: 20px;
   margin-bottom: 100px;
   margin-right: 150px;
-  margin-left: 100px;
-  background-color: rgb(24, 12, 12);
-  
+  margin-left: 55px;
+  background-image: url('https://thumbs.gfycat.com/AdmiredDigitalHarrier-size_restricted.gif');
+  background-size: cover;
+  background-position-x: -500px;
+  background-repeat: no-repeat;
+ 
 }
 
 .champion-card {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  background-image: linear-gradient(to bottom, #9999ff 1%, #0066ff 102%);
+  background-image: linear-gradient(to bottom, #080808 0%, rgb(190, 197, 206) 102%);
   flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -67,7 +109,7 @@
 .card-image {
   height: 200px;
   width: 300px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 .detail-box {
   margin: auto;
@@ -76,10 +118,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 85vh;
-  /* width: 50vw; */
-  width: 50%;
-  background-color: rgb(250, 246, 250);
+  height: 100vh;
+  
+  width: 57%;
+  background-color:rgb(255, 255, 255);
   border-radius: 50px;
   outline: black;
   border: solid;
@@ -88,10 +130,9 @@
 }
 
 .detail-container{
-  background: url("https://cdn.vox-cdn.com/thumbor/fPJRYcGWmkUrR89XCmT551_Iqnk=/0x0:1440x810/1400x1400/filters:focal(513x203:743x433):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55801581/fairly_odd_parents.0.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   align-items: center;
   
 }
@@ -103,12 +144,13 @@
 
 .detail-clip {
   object-fit: cover;
+  /* width: auto; */
   
 }
 
 .clip {
-  object-fit: cover;
-  /* width: 75%; */
+  object-fit: center;
+  /* width: auto; */
 }
 
 .ball {
@@ -125,7 +167,7 @@
 }
 
 .detail-title {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .title-box {
@@ -138,5 +180,7 @@
 }
 
 .detail-bio {
-  width: 60%;
+  width: 93%;
 }
+
+
