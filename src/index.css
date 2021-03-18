@@ -1,0 +1,142 @@
+
+.app-container{
+  background-color: rgb(176, 179, 33);
+}
+
+.header-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background: linear-gradient(to bottom, #080808 0%, rgb(10, 84, 180) 102%);
+} 
+
+
+.nav-link {
+  color: rgb(14, 219, 226); 
+  font-family: "Fredoka One";
+  font-size: 25px;
+  text-shadow: 2px 2px #10b2c7;
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.card-container {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: auto auto auto auto ;
+  grid-gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 100px;
+  background-color: rgb(24, 12, 12);
+  
+}
+
+.champion-card {
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #9999ff 1%, #0066ff 102%);
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 3px 3px black;
+  transition: transform .2s;
+}
+
+.champion-card:hover{
+  transform: scale(1.1);
+}
+
+.card-content{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+.detail-box {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 85vh;
+  /* width: 50vw; */
+  width: 50%;
+  background-color: rgb(250, 246, 250);
+  border-radius: 50px;
+  outline: black;
+  border: solid;
+  box-shadow: 5px 10px;
+  
+}
+
+.detail-container{
+  background: url("https://cdn.vox-cdn.com/thumbor/fPJRYcGWmkUrR89XCmT551_Iqnk=/0x0:1440x810/1400x1400/filters:focal(513x203:743x433):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55801581/fairly_odd_parents.0.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  
+}
+
+.outer-box {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.detail-clip {
+  object-fit: cover;
+  
+}
+
+.clip {
+  object-fit: cover;
+  /* width: 75%; */
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+.detail-name {
+  color: black;
+  font-family: "Fredoka One";
+  font-size: 30px;
+  /* text-shadow: 2px 2px #FF0000; */
+}
+
+.detail-title {
+  font-size: 30px;
+}
+
+.title-box {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+.title-box {
+  margin-bottom: 1px;
+}
+
+.detail-bio {
+  width: 60%;
+}
