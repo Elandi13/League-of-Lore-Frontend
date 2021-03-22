@@ -27,6 +27,7 @@ function Login({setCurrentUser}){
                 setCurrentUser(user)
                 history.push("/")
             })
+
         }
         return(
         <div className = "login">

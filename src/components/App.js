@@ -16,6 +16,9 @@ function App() {
   const[regions, setRegions] = useState([])
   const[search, setSearch] = useState("")
   const[currentUser, setCurrentUser] =useState(null)
+  const[stories, setStories] = useState([])
+
+  
 
 
   useEffect(()=>{
@@ -25,9 +28,11 @@ function App() {
       .then((response) => response.json())
       .then(data => {
         setCurrentUser(data)
+        // console.log(data)
       })
     }
   },[])
+
 
   useEffect(()=>{
     fetch(`http://localhost:3000/champions`)
@@ -43,20 +48,27 @@ function App() {
   },[])
 
 
+  useEffect(()=>{
+    fetch(`http://localhost:3000/user_stories`)
+    .then(response => response.json())
+    .then((storyData) => setStories(storyData))
+    
+  },[])
+
+
   function handleSearchChange(event){
-    // console.log(event.target.value)
     setSearch(event.target.value)
   }
   
+
+
   const filteredChamps = champions.filter((champion) => {
     return champion.name.toLowerCase().includes(search.toLowerCase())
   })
 
 
-
-
   return (
-    <div class= "app-container">
+    <div className= "app-container">
       <Switch> 
         <Route exact path="/"> 
         <Header  
@@ -81,7 +93,10 @@ function App() {
           currentUser ={currentUser} 
           setCurrentUser={setCurrentUser}
           />
-          <ChampionDetailPage/>
+          <ChampionDetailPage
+          stories={stories}
+          setStories={setStories}
+          />
         </Route>
 
         <Route exact path="/regions"> 

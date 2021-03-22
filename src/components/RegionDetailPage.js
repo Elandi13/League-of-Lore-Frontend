@@ -19,14 +19,14 @@ function RegionDetailPage(){
         <div style={{ 
             backgroundImage: `url(${imageBackground})` 
           }}>
-            <div class="detail-box"> 
-                <div class="detail-header">
-                    <h1 class="detail-title">
+            <div className="detail-box"> 
+                <div className="detail-header">
+                    <h1 className="detail-title">
                         {region.name} 
                     </h1>
                 </div>
         
-                <div class="detail-bio">
+                <div className="detail-bio">
                     {region.summary} 
                 </div>
             </div>

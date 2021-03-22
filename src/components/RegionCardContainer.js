@@ -13,7 +13,7 @@ function RegionCardContainer({regions}){
     })
 
     return(
-    <div class = "card-container">
+    <div className = "card-container">
         {regionsList}
     </div>
     )

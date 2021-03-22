@@ -7,14 +7,14 @@ function ChampionCard({id, name, image,}){
   
     
     return(
-        <div class ="champion-card">
+        <div className ="champion-card">
             <Link to = {`/champions/${id}`}> 
-            <img id={id} src={image} alt={name} class="card-image"/>
+            <img id={id} src={image} alt={name} className="card-image"/>
             </Link>
             
                 
-            <div class="card-content">
-                 <h2 class="card-content"> {name} </h2>
+            <div className="card-content">
+                 <h2 className="card-content"> {name} </h2>
             </div> 
         </div>
     )

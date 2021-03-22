@@ -15,7 +15,7 @@ function CardContainer({filteredChamps}) {
     
 
     return( 
-        <div class = "card-container"> 
+        <div className = "card-container"> 
         
           {championList}
            

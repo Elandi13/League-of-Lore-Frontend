@@ -5,14 +5,14 @@ import { Link } from "react-router-dom"
 function RegionCard({id, image, name}){
 
     return(
-        <div class ="champion-card">
+        <div className ="champion-card">
             <Link to = {`/regions/${id}`}> 
-            <img id={id} src={image} alt={name} class="card-image"/>
+            <img id={id} src={image} alt={name} className="card-image"/>
             </Link>
             
                 
-            <div class="card-content">
-                 <h2 class="card-content"> {name} </h2>
+            <div className="card-content">
+                 <h2 className="card-content"> {name} </h2>
             </div> 
         </div>
     )
