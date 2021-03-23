@@ -4,15 +4,14 @@ import Stories from "./Stories"
 
 
 function ChampionDetailPage({stories, setStories}){
+
+    // console.log(stories.id)
     const[champion, setChampions] = useState([])
     const params = useParams()
     const id = params.id
     const imageBackground = champion.background
-
-    // const [newStory, setNewStory] = useState([])
-    const [formData, setFormData] = useState({story: ""})
-
     
+    const [formData, setFormData] = useState({story: ""})
     function handleFormChange(event){
         event.preventDefault()
         const updatedForm = {...formData}
@@ -24,23 +23,32 @@ function ChampionDetailPage({stories, setStories}){
     const filteredStories = stories.filter((story)=> {
         return story.champion_id === champion.id
     })
-    // console.log(filteredStories)
 
+
+    
+    
     const userStories = filteredStories.map((champStory)=>{
         return(
             <Stories
             key={champStory.id}
-            // user_id={story.user_id}
-            champion_id ={champStory.champion_id}
+            id={champStory.id}
             storyText={champStory.story}
-            // onAddStory={onAddStory}
+            handleDeleteStory={deleteStory}
             />
             )
-    })
+        })
+
+
+
 
     function AddStory(newStory){
         const newStories = [...stories, newStory]
         setStories(newStories)
+    }
+    // console.log(id)
+    function deleteStory(id){
+        const updatedStories = stories.filter((story)=> story.id !== id)
+        setStories(updatedStories)
     }
 
 
@@ -58,18 +66,6 @@ function ChampionDetailPage({stories, setStories}){
             .then(data => {AddStory(data)}) 
     }
 
-
-
-
-
-    // const filteredStories = userStories.filter((userStory)=> {
-    //     return userStory.key === champion.id
-          
-    // })
-    
-    // console.log(filteredStories)
-    
-    // console.log(userStories)
 
     useEffect(()=>{
         fetch(`http://localhost:3000/champions/${id}`)
