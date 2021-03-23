@@ -34,6 +34,7 @@ function ChampionDetailPage({stories, setStories}){
             id={champStory.id}
             storyText={champStory.story}
             handleDeleteStory={deleteStory}
+            onUpdateStory ={handleUpdateStory}
             />
             )
         })
@@ -49,6 +50,19 @@ function ChampionDetailPage({stories, setStories}){
     function deleteStory(id){
         const updatedStories = stories.filter((story)=> story.id !== id)
         setStories(updatedStories)
+    }
+
+    function handleUpdateStory(updatedStory) {
+        const updatedEdit = stories.map(story=> {
+            // console.log(story.id)
+            // console.log(updatedStory.id)
+            if(story.id === updatedStory.id){
+                return updatedStory
+            } else{
+                return story
+            }
+        })
+        setStories(updatedEdit)
     }
 
 

@@ -1,11 +1,12 @@
-import React from "react"
-// import {useHistory} from "react-router-dom"
+import React, { useState } from "react"
+import EditStory from "./EditStory"
 
 
+function Stories({storyText,id, handleDeleteStory, onUpdateStory}){
+    const[isEditing, setIsEdited] = useState(false)
+    
 
-function Stories({storyText, id, handleDeleteStory}){
-
-   
+    
 
     function handleDelete(){
         // console.log(id)
@@ -16,15 +17,17 @@ function Stories({storyText, id, handleDeleteStory}){
         handleDeleteStory(id)
     }
 
-    function handleEdit(e){
-        console.log(e.target)
+    function handleUpdateNewStory(updateEdit){
+        setIsEdited(false)
+        onUpdateStory(updateEdit)
     }
 
     return(
        <div>
-
-        <p>{storyText}</p>
-        <button className="edit-button" value={storyText} onClick={handleEdit}> edit </button>
+           {/* <p> {storyText} </p> */}
+        {isEditing ? <EditStory id={id} body={storyText} onUpdateStory={handleUpdateNewStory}/> : <p>{storyText}</p>}   
+        {/* <p>{storyText}</p> */}
+        <button className="edit-button" onClick={() => setIsEdited(isEditing => !isEditing)} > edit </button>
         <button className="delete-button" value={id} onClick={handleDelete} > delete </button>
        </div>
       

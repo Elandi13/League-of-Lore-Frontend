@@ -59,7 +59,7 @@ function App() {
   function handleSearchChange(event){
     setSearch(event.target.value)
   }
-  
+
 
 
   const filteredChamps = champions.filter((champion) => {
