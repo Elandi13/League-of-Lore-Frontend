@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router"
+import {Link} from "react-router-dom"
+
 import Stories from "./Stories"
 
 
-function ChampionDetailPage({stories, setStories}){
+
+
+function ChampionDetailPage({stories, setStories, regions}){
 
     // console.log(stories.id)
     const[champion, setChampions] = useState([])
@@ -24,9 +28,6 @@ function ChampionDetailPage({stories, setStories}){
         return story.champion_id === champion.id
     })
 
-
-    
-    
     const userStories = filteredStories.map((champStory)=>{
         return(
             <Stories
@@ -110,9 +111,9 @@ function ChampionDetailPage({stories, setStories}){
                 </div>
 
                 <div className="detail-faction">
-                    <h4 className="detail-faction">
-                        Region: {champion.faction}
-                    </h4>
+                    <Link to= "/regions" className="detail-faction">
+                        {champion.faction}
+                    </Link >
                 </div>
                 
                 <div className="detail-clip">

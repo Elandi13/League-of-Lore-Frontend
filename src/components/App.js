@@ -11,12 +11,14 @@ import Login from "./Login"
 
 
 
+
 function App() {
   const[champions, setChampions] = useState([])
   const[regions, setRegions] = useState([])
+  const[stories, setStories] = useState([])
   const[search, setSearch] = useState("")
   const[currentUser, setCurrentUser] =useState(null)
-  const[stories, setStories] = useState([])
+
 
   
 
@@ -47,6 +49,7 @@ function App() {
     .then((regionsArray)=> setRegions(regionsArray))
   },[])
 
+  // console.log(regions)
 
   useEffect(()=>{
     fetch(`http://localhost:3000/user_stories`)
@@ -56,9 +59,12 @@ function App() {
   },[])
 
 
+
+
   function handleSearchChange(event){
     setSearch(event.target.value)
   }
+
 
 
 
@@ -115,7 +121,9 @@ function App() {
           currentUser ={currentUser} 
           setCurrentUser={setCurrentUser}
           />
-          <RegionDetailPage/>
+          <RegionDetailPage
+          // champRegions={champRegions}
+          />
         </Route>
 
         <Route path = "/login"> 
