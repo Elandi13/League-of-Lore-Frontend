@@ -20,8 +20,6 @@ function App() {
   const[currentUser, setCurrentUser] =useState(null)
 
 
-  
-
 
   useEffect(()=>{
     const token = null
@@ -49,7 +47,6 @@ function App() {
     .then((regionsArray)=> setRegions(regionsArray))
   },[])
 
-  // console.log(regions)
 
   useEffect(()=>{
     fetch(`http://localhost:3000/user_stories`)
@@ -57,16 +54,11 @@ function App() {
     .then((storyData) => setStories(storyData))
     
   },[])
-
-
-
+  
 
   function handleSearchChange(event){
     setSearch(event.target.value)
   }
-
-
-
 
   const filteredChamps = champions.filter((champion) => {
     return champion.name.toLowerCase().includes(search.toLowerCase())
@@ -101,7 +93,7 @@ function App() {
           />
           <ChampionDetailPage
           stories={stories}
-          setStories={setStories}
+          setStories={setStories}  
           />
         </Route>
 

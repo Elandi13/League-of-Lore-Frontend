@@ -23,12 +23,14 @@ function Stories({storyText,id, handleDeleteStory, onUpdateStory}){
     }
 
     return(
-       <div>
-           {/* <p> {storyText} </p> */}
+       <div className = "story-container">
+           <div className = "story-text">
         {isEditing ? <EditStory id={id} body={storyText} onUpdateStory={handleUpdateNewStory}/> : <p>{storyText}</p>}   
-        {/* <p>{storyText}</p> */}
-        <button className="edit-button" onClick={() => setIsEdited(isEditing => !isEditing)} > edit </button>
-        <button className="delete-button" value={id} onClick={handleDelete} > delete </button>
+        <button className="edit-button" onClick={() => setIsEdited(isEditing => !isEditing)} >✏️</button>
+        <button className="delete-button" value={id} onClick={handleDelete} >🗑</button>
+           </div>
+
+
        </div>
       
         )

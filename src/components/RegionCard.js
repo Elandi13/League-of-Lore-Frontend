@@ -10,6 +10,7 @@ function RegionCard({id, image, name}){
             <img id={id} src={image} alt={name} className="card-image"/>
             </Link>
             
+            
                 
             <div className="card-content">
                  <h2 className="card-content"> {name} </h2>

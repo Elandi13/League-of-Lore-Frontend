@@ -56,7 +56,7 @@ function Login({setCurrentUser}){
                     <input type="submit" value="Login" className='input-button' />
                 </form>
             </div>
-        </div>
+        </div> 
     
 
     )

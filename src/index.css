@@ -1,6 +1,7 @@
 .app-container{
   background: black;
-  width: 100%;
+  width: cover;
+  /* height: cover; */
 }
 
 /* html {
@@ -22,7 +23,6 @@ body {
   /* background: linear-gradient(to bottom, #080808 0%, rgb(190, 197, 206) 102%); */
 } 
 
-
 .nav-link {
   color: rgb(16, 202, 193); 
   font-family: "Fredoka One";
@@ -39,6 +39,15 @@ body {
   cursor: pointer;
 }
 
+.filter-container{
+  text-align: center;
+  background-image: url('https://thumbs.gfycat.com/AdmiredDigitalHarrier-size_restricted.gif');
+}
+.search-bar {
+  align-items: center;
+}
+
+
 .login {
   position: absolute;
   display: block;
@@ -50,7 +59,6 @@ body {
   width: 100%;
   
 }
-
 
 .login-form-box {
   position: relative;
@@ -109,6 +117,8 @@ body {
 
 
 .card-container {
+  color: white;
+  font-family: 'Questrial', cursive;
   display: grid;
   justify-content: space-between;
   align-items: center;
@@ -119,7 +129,6 @@ body {
   margin-right: 25px;
   margin-left: 25px;
   background-color: black;
-  /* background-image: url('https://thumbs.gfycat.com/AdmiredDigitalHarrier-size_restricted.gif'); */
   background-size: cover;
   background-position-x: -500px;
   background-repeat: no-repeat;
@@ -130,8 +139,12 @@ body {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  background-image: linear-gradient(to bottom, #807d7d 0%, rgb(39, 159, 189) 102%);
-  /* background-image:  url('https://thumbs.gfycat.com/AdmiredDigitalHarrier-size_restricted.gif'); */
+  /* background-image: linear-gradient(to right, #807d7d 0%, rgb(39, 159, 189) 102%); */
+  background-image:  url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEu5j4vK4RiqeevV3O7cDqe9sxtYyUYjh6A&usqp=CAU');
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -158,7 +171,7 @@ body {
 }
 .detail-box {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 25px;
   display: auto;
   flex-direction: column;
   justify-content: space-evenly;
@@ -166,11 +179,15 @@ body {
   height: 100vh;
   padding-left: 10px;
   overflow: auto;
-  
-  width: 57%;
-  background-color:rgb(255, 255, 255);
+  width: 80%;
+  /* background-color:rgb(255, 255, 255);*/
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/015/759/391/original/artur-sadlos-doublelift-unstoppable-league-of-legends-001.gif?1549533079");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position: auto;
   border-radius: 50px;
-  outline: black;
+  outline: white;
   border: solid;
   box-shadow: 5px 10px;
   
@@ -192,16 +209,12 @@ body {
 .detail-clip {
   object-fit: cover;
   text-align: center;
-
 }
 
 .clip {
   object-fit: center;
+}
   
-  }
-  
-
-
 .ball {
   position: absolute;
   border-radius: 100%;
@@ -209,21 +222,24 @@ body {
 }
 
 .detail-name {
-  color: black;
-  font-family: "Fredoka One";
-  
+  /* color:orange; */
   font-size: 30px;
-  /* text-shadow: 2px 2px #FF0000; */
+  font-family: 'Questrial', sans-serif;
 }
 
 .detail-title {
   font-size: 22px;
   text-align: center;
+  font-family: 'Questrial', sans-serif;
+  color:rgb(179, 82, 18);
+
 }
 
 .detail-faction {
   font-size: 22px;
   text-align: center;
+  font-family: 'Questrial', sans-serif;
+  color:rgb(179, 82, 18);
 
 }
 
@@ -233,16 +249,58 @@ body {
 }
 
 .title-box {
-  
   margin-bottom: 1px;
 }
 
 .detail-bio {
-  width: 93%;
+  width: 98%;
   text-align: center;
   margin-top: 20px;
+  font-family: 'Questrial', sans-serif;
+  color:rgb(179, 82, 18);
+
 }
 
+/* this is the story  */
+
+.story-header{
+  font-family: 'Questrial', sans-serif;
+  text-align: center;
+  color:rgb(179, 82, 18);
+}
+
+/* .story-container{
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/9112b576009313.5c5ca8e8c45c3.jpg");
+} */
+
+.story-text{
+  /* background-image: url("https://www.2grobotics.com/wp-content/uploads/2017/08/text-background.jpg"); */
+  background-size: cover;
+  width: 98%;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Questrial', sans-serif;
+  color:bisque;
+}
+
+.new-form{
+  text-align: center;
+  color: white;
+}
+
+.edit-text{
+  height: 300px;
+  width: 500px;
+}
+.form-text{
+  height: 300px;
+  width: 500px;
+}
+
+.form-control{
+  text-align: justify;
+  height: 50px;
+}
 /* .region-detail-box {
   margin: auto;
   margin-top: 20px;
@@ -275,3 +333,5 @@ body {
   font-size: 22px;
   text-align: center;
 } */
+
+

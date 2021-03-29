@@ -33,16 +33,23 @@ function EditStory({id, body, onUpdateStory}){
       
 
     return(
+      <div className ="form-container">
         <form className="edit-message" onSubmit={handleFormSubmit}>
-        <input
-          type="text"
-          name="body"
-          autoComplete="off"
-          value={messageBody}
-          onChange={(e) => setMessageBody(e.target.value)}
-        />
-        <input type="submit" value="Save" />
+          <label>
+            Edit Your Review: <br/>
+            <textarea  
+            className = "edit-text"
+            type="text"
+             name ="body" 
+             autoComplete="off" 
+             value={messageBody} 
+             onChange={(e) => setMessageBody(e.target.value)} 
+             />
+          </label>
+          <br/>
+          <button type ="submit" className="submit-button"> Update Story </button>
       </form>
+          </div>
     )
 }
 

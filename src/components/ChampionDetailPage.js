@@ -7,9 +7,10 @@ import Stories from "./Stories"
 
 
 
-function ChampionDetailPage({stories, setStories, regions}){
-
-    // console.log(stories.id)
+function ChampionDetailPage({stories, setStories}){
+    const [isToggled, setToggled]= useState(true)
+    const toggleTrueFalse = () => setToggled(!isToggled)
+  
     const[champion, setChampions] = useState([])
     const params = useParams()
     const id = params.id
@@ -89,6 +90,7 @@ function ChampionDetailPage({stories, setStories, regions}){
             setChampions(championData)
         })
     },[id])
+    
 
     // console.log(champion.id)
 
@@ -123,27 +125,32 @@ function ChampionDetailPage({stories, setStories, regions}){
                 <div className="detail-bio">
                     {champion.bio} 
                 </div>
-
-
                 <div className = "story-container">
-                    <h2> The Stories of {champion.name} </h2>
+                    <h2 className="story-header"> The Stories of {champion.name} </h2>
                     
                          {userStories}
-
-                         <div>
+                            <br></br>
+                            
+                          
+                        <button type ="click" onClick={toggleTrueFalse}> Write A Story</button>
+                         { isToggled? null : 
+                        <div>
                          <form className = "new-form" onSubmit={handleSubmit} > 
-                            <label htmlFor = "story" > </label>
-                            <input
-                            type="text"
-                            name="story" 
-                            placeholder="Write Story" 
-                            value={formData.story}
-                            className = "form-control"
-                            onChange={handleFormChange}
-                            />
+                         <label>
+                             Write Story:
+                             <br/>
+                             <textarea 
+                             className ="form-text"
+                             placeholder = "Enter Text..."
+                             name ="story" 
+                             value={formData.story} 
+                             onChange={handleFormChange}/>
+                         </label>
+                            <br></br>
                             <button type="submit" className ="submit-story" > Submit Story</button>
                             </form>
-                         </div>
+                        </div>
+                        }
                 </div>
             </div>
         </div>
