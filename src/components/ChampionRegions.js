@@ -13,7 +13,7 @@ function ChampionRegions({id, name, image}){
                 
             <div className="card-content">
                  <h2 className="card-content"> {name} </h2>
-            </div> 
+            </div>
         </div>
     )
 }

@@ -26,7 +26,7 @@ function App() {
   useEffect(()=>{
     const token = null
     if(token){
-      fetch(`http://localhost:3000/me`)
+      fetch(`http://localhost:3000/`)
       .then((response) => response.json())
       .then(data => {
         setCurrentUser(data)

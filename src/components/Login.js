@@ -9,6 +9,7 @@ function Login({setCurrentUser}){
     })
 
     const history = useHistory()
+
     function handleChange(e){
         setLoginData({...loginData, [e.target.name]: e.target.value})
     }
@@ -24,6 +25,7 @@ function Login({setCurrentUser}){
          })
             .then((r) => r.json())
             .then((user) => {
+                // console.log(user)
                 setCurrentUser(user)
                 history.push("/")
             })
