@@ -1,12 +1,7 @@
 .app-container{
   background: black;
   width: cover;
-  /* height: cover; */
 }
-
-/* html {
-margin: 0;
-} */
 
 body {
   margin: 0;
@@ -18,9 +13,8 @@ body {
   width: 100%;
   text-align: center;
   background-image: url('https://thumbs.gfycat.com/AdmiredDigitalHarrier-size_restricted.gif');
-  
   align-items: center;
-  /* background: linear-gradient(to bottom, #080808 0%, rgb(190, 197, 206) 102%); */
+
 } 
 
 .nav-link {
@@ -29,7 +23,6 @@ body {
   font-size: 25px;
   text-shadow: 2px 2px #3c9dc4;
   display: inline-block;
-  /* margin: 1rem; */
   margin-left: 100px;
   margin-right: 100px;
   width: 100%;
@@ -51,7 +44,7 @@ body {
 .login {
   position: absolute;
   display: block;
-  background: url(https://64.media.tumblr.com/5e4b16b9ee6449bb16fddc9099e5bbb5/tumblr_phm1k53y8L1tbrdouo1_500.gifv);
+  background: url("https://64.media.tumblr.com/5e4b16b9ee6449bb16fddc9099e5bbb5/tumblr_phm1k53y8L1tbrdouo1_500.gifv");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,7 +116,7 @@ body {
   justify-content: space-between;
   align-items: center;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
+  grid-gap: 5px;
   margin-top: 25px;
   margin-bottom: 25px;
   margin-right: 25px;
@@ -139,7 +132,6 @@ body {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  /* background-image: linear-gradient(to right, #807d7d 0%, rgb(39, 159, 189) 102%); */
   background-image:  url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEu5j4vK4RiqeevV3O7cDqe9sxtYyUYjh6A&usqp=CAU');
   background-position-x: center;
   background-position-y: center;
@@ -301,37 +293,194 @@ body {
   text-align: justify;
   height: 50px;
 }
-/* .region-detail-box {
-  margin: auto;
-  margin-top: 20px;
-  display: auto;
+
+.header{
+  color: white;
+  text-align: center;
+}
+
+/* testing cards */
+
+.abs,
+h2:after,
+.cards .card figcaption,
+.cards .card:after,
+.news .card figcaption,
+.news .card:after,
+.news .article figcaption {
+  position: absolute;
+}
+.rel,
+h2,
+h2 strong,
+.cards .card,
+.news .card,
+.news .article {
+  position: relative;
+}
+.fix {
+  position: fixed;
+}
+.dfix {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.dn {
+  display: none;
+}
+.df,
+.cards,
+.news {
+  display: flex;
+}
+.dif {
+  display: inline-flex;
+}
+.dg {
+  display: grid;
+}
+.dig {
+  display: inline-grid;
+}
+.vm,
+h2,
+h2 strong,
+h2 span {
+  vertical-align: middle;
+
+}
+body {
+  background: black;
+  font-family: 'Alegreya Sans';
+}
+.wrapper {
+  padding: 15px;
+}
+.cards,
+.news {
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.cards .card,
+.news .card {
+  margin: 12px;
+  width: 280px;
+  height: 280px;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
-  padding-left: 10px;
-  overflow: auto;
-  
-  width: 57%;
-  background-color: transparent;
-
-  border-radius: 50px;
-  outline: black;
-  border: solid;
-  box-shadow: 5px 10px;
-  
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+.cards .card img,
+.news .card img {
+  width: 100%;
+  min-height: 100%;
+}
+.cards .card figcaption,
+.news .card figcaption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+.cards .card:after,
+.news .card:after {
+  content: '';
+  z-index: 10;
+  width: 200%;
+  height: 100%;
+  top: -90%;
+  left: -20px;
+  opacity: 0.1;
+  transform: rotate(45deg);
+  background: linear-gradient(to top, transparent, #fff 15%, rgba(255,255,255,0.5));
+  transition: 0.3s;
+}
+.cards .card:hover,
+.news .card:hover,
+.cards .card:focus,
+.news .card:focus,
+.cards .card:active,
+.news .card:active {
+  box-shadow: 0 8px 16px 3px rgba(0,0,0,0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+.cards .card:hover figcaption,
+.news .card:hover figcaption,
+.cards .card:focus figcaption,
+.news .card:focus figcaption,
+.cards .card:active figcaption,
+.news .card:active figcaption {
+  transform: none;
+}
+.cards .card:hover:after,
+.news .card:hover:after,
+.cards .card:focus:after,
+.news .card:focus:after,
+.cards .card:active:after,
+.news .card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+.news .article {
+  overflow: hidden;
+  width: 350px;
+  height: 235px;
+  margin: 20px;
+}
+.news .article img {
+  width: 100%;
+  min-height: 100%;
+  transition: 0.2s;
+}
+.news .article figcaption {
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(51,51,51,0.3);
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  background: rgba(6,18,53,0.6);
+  opacity: 0;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+.news .article figcaption h3 {
+  color: #3792e3;
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.news .article:hover img,
+.news .article:focus img,
+.news .article:active img {
+  filter: blur(3px);
+  transform: scale(0.97);
+}
+.news .article:hover figcaption,
+.news .article:focus figcaption,
+.news .article:active figcaption {
+  opacity: 1;
+  transform: none;
 }
 
-.region-detail-bio{
-  width: 93%;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.region-detail-title {
-  text-decoration: white;
-  font-size: 22px;
-  text-align: center;
-} */
-
+/* Region Champion Cards */
 

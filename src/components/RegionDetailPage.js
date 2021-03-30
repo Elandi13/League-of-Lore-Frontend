@@ -62,14 +62,16 @@ function RegionDetailPage(){
                 <div className="detail-bio">
                     {region.summary} 
                 </div>
-                <div>
+                <div className ="header">
                    <h1> The Champions of {region.name}</h1> 
+                   <div className = "cards">
                     {champList}
+                   </div>
                 </div>
             </div>
         </div>
-    )
-}
-
-
-export default RegionDetailPage;
+        )
+    }
+    
+    
+    export default RegionDetailPage;

@@ -129,9 +129,7 @@ function ChampionDetailPage({stories, setStories}){
                     <h2 className="story-header"> The Stories of {champion.name} </h2>
                     
                          {userStories}
-                            <br></br>
-                            
-                          
+                        
                         <button type ="click" onClick={toggleTrueFalse}> Write A Story</button>
                          { isToggled? null : 
                         <div>

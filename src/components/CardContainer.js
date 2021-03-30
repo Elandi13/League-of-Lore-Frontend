@@ -9,16 +9,18 @@ function CardContainer({filteredChamps}) {
                 name ={champ.name}
                 bio={champ.bio}
                 image={champ.image}
+                faction={champ.faction}
+                title={champ.title}
             />
             )
         })
-    
-
-    return( 
-        <div className = "card-container"> 
         
-          {championList}
-           
+        return( 
+            <div className ="header">
+            <h2><strong> The Champions of Runeterra </strong></h2>
+        <div className = "cards"> 
+            {championList}
+            </div>
         </div>
     )
 }

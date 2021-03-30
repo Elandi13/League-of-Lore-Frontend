@@ -13,9 +13,13 @@ function RegionCardContainer({regions}){
     })
 
     return(
-    <div className = "card-container">
-        {regionsList}
-    </div>
+        <div className ="header">
+            <h2><strong> Welcome to The World of Runeterra </strong></h2>
+
+            <div className = "cards">
+                {regionsList}
+            </div>
+        </div>
     )
 }
 
