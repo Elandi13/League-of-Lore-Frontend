@@ -8,6 +8,7 @@ function RegionCardContainer({regions}){
         id = {region.id}
         name ={region.name}
         image ={region.image}
+        background={region.background}
         />
        )
     })

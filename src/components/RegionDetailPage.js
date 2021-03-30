@@ -7,7 +7,7 @@ function RegionDetailPage(){
     const[champions, setChampions] = useState([])
     const params = useParams()
     const id = params.id 
-    const imageBackground = region.image
+    // const imageBackground = region.image
     
     useEffect(()=>{
         fetch(`http://localhost:3000/regions/${id}`)
@@ -46,22 +46,24 @@ function RegionDetailPage(){
         ) 
     })
 
-    // console.log(champList)
+    console.log(region)
 
     return(
-        <div style={{ 
-            backgroundImage: `url(${imageBackground})` 
-          }}>
-            <div className="detail-box"> 
-                <div className="detail-header">
-                    <h1 className="detail-title">
+        <div className ="region-background-image">
+            <img src = {region.image} alt = "region-background"/>
+            <div className ="header"> 
+                <div>
+                    <h1>
                         {region.name} 
                     </h1>
                 </div>
         
-                <div className="detail-bio">
+                <div>
                     {region.summary} 
                 </div>
+                {/* <div className="detail-clip"> */}
+                    <iframe className="clip" title = "cinematic" width="600" height="325" src={region.background} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                {/* </div> */}
                 <div className ="header">
                    <h1> The Champions of {region.name}</h1> 
                    <div className = "cards">
