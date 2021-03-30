@@ -11,7 +11,7 @@ function ChampionDetailPage({stories, setStories}){
     const [isToggled, setToggled]= useState(true)
     const toggleTrueFalse = () => setToggled(!isToggled)
   
-    const[champion, setChampions] = useState([])
+    const[champion, setChampion] = useState([])
     const params = useParams()
     const id = params.id
     const imageBackground = champion.background
@@ -40,7 +40,6 @@ function ChampionDetailPage({stories, setStories}){
             />
             )
         })
-
 
 
 
@@ -87,12 +86,9 @@ function ChampionDetailPage({stories, setStories}){
         fetch(`http://localhost:3000/champions/${id}`)
         .then(response=> response.json())
         .then((championData)=> {
-            setChampions(championData)
+            setChampion(championData)
         })
     },[id])
-    
-
-    // console.log(champion.id)
 
     return(
         <div style={{ 
@@ -129,8 +125,8 @@ function ChampionDetailPage({stories, setStories}){
                     <h2 className="story-header"> The Stories of {champion.name} </h2>
                     
                          {userStories}
-                        
-                        <button type ="click" onClick={toggleTrueFalse}> Write A Story</button>
+                        <br/>
+                        <button className = "story-button" type ="click" onClick={toggleTrueFalse}> Write A Story</button>
                          { isToggled? null : 
                         <div>
                          <form className = "new-form" onSubmit={handleSubmit} > 

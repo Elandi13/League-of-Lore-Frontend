@@ -18,6 +18,7 @@ function App() {
   const[stories, setStories] = useState([])
   const[search, setSearch] = useState("")
   const[currentUser, setCurrentUser] =useState(null)
+ 
 
 
 
@@ -41,6 +42,8 @@ function App() {
   },[])
 
 
+
+   
   useEffect(()=> {
     fetch(`http://localhost:3000/regions`)
     .then(response => response.json())
@@ -93,7 +96,8 @@ function App() {
           />
           <ChampionDetailPage
           stories={stories}
-          setStories={setStories}  
+          setStories={setStories} 
+         
           />
         </Route>
 
