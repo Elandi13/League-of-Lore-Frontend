@@ -162,7 +162,7 @@ body {
 }
 .detail-box {
   margin: auto;
-  margin-top: 25px;
+  margin-top: 5px;
   display: auto;
   flex-direction: column;
   justify-content: space-evenly;
@@ -184,7 +184,7 @@ body {
   
 }
 .story-button{
-  margin-left: 45%;
+  margin-left: 46%;
 }
 
 .region-summary{
@@ -276,11 +276,14 @@ body {
 .story-text{
   /* background-image: url("https://www.2grobotics.com/wp-content/uploads/2017/08/text-background.jpg"); */
   background-size: cover;
-  width: 98%;
+  width: 80%;
+  margin: auto;
   text-align: center;
   margin-top: 20px;
   font-family: 'Questrial', sans-serif;
   color:bisque;
+  line-height: 2;
+
 }
 
 .new-form{

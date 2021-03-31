@@ -46,7 +46,7 @@ function RegionDetailPage(){
         ) 
     })
 
-    console.log(region)
+    // console.log(region)
 
     return(
         <div className ="region-background-image">
