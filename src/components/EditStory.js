@@ -15,7 +15,7 @@ function EditStory({id, body, onUpdateStory}){
         }
         // console.log(data)
         // console.log(messageBody)
-        fetch(`http://localhost:3000/user_stories/${id}`, {
+        fetch(`https://league-of-lore.herokuapp.com/user_stories/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

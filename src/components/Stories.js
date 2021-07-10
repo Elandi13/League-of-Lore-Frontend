@@ -10,7 +10,7 @@ function Stories({storyText,id, handleDeleteStory, onUpdateStory}){
 
     function handleDelete(){
         // console.log(id)
-        fetch(`http://localhost:3000/user_stories/${id}`, {
+        fetch(`https://league-of-lore.herokuapp.com/user_stories/${id}`, {
     
             method: 'DELETE',
         })

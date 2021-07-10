@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router"
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 
 import Stories from "./Stories"
 
@@ -69,7 +69,7 @@ function ChampionDetailPage({stories, setStories}){
 
      function handleSubmit(event){
       event.preventDefault()
-        fetch('http://localhost:3000/user_stories', 
+        fetch('https://league-of-lore.herokuapp.com/user_stories', 
         {
             method: 'POST', 
             headers: {
@@ -83,7 +83,7 @@ function ChampionDetailPage({stories, setStories}){
 
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/champions/${id}`)
+        fetch(`https://league-of-lore.herokuapp.com/champions/${id}`)
         .then(response=> response.json())
         .then((championData)=> {
             setChampion(championData)
@@ -109,9 +109,9 @@ function ChampionDetailPage({stories, setStories}){
                 </div>
 
                 <div className="detail-faction">
-                    <Link to= "/regions" className="detail-faction">
+                    {/* <Link to= "/regions" className="detail-faction"> */}
                         {champion.faction}
-                    </Link >
+                    {/* </Link > */}
                 </div>
                 
                 <div className="detail-clip">
@@ -119,6 +119,7 @@ function ChampionDetailPage({stories, setStories}){
                 </div>
                
                 <div className="detail-bio">
+                        <h2> Biograpy </h2>
                     {champion.bio} 
                 </div>
                 <div className = "story-container">

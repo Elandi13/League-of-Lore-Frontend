@@ -10,7 +10,7 @@ function RegionDetailPage(){
     // const imageBackground = region.image
     
     useEffect(()=>{
-        fetch(`http://localhost:3000/regions/${id}`)
+        fetch(`https://league-of-lore.herokuapp.com/regions/${id}`)
         .then(response => response.json())
         .then((regionData) => {
             setRegions(regionData)
@@ -20,7 +20,7 @@ function RegionDetailPage(){
 
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/champion_regions`)
+        fetch(`https://league-of-lore.herokuapp.com/champion_regions`)
         .then(response => response.json())
         .then((championRegion) => {
             setChampions(championRegion)
@@ -28,7 +28,7 @@ function RegionDetailPage(){
     },[])
 
 
-    const filterChamps = champions.filter((champ)=>{
+    const filterChamps = champions.filter((champ) => {
         if(region.id === champ.region.id){
             return setChampions
         }

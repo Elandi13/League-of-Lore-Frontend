@@ -25,7 +25,7 @@ function App() {
   useEffect(()=>{
     const token = null
     if(token){
-      fetch(`http://localhost:3000/`)
+      fetch(`ttps://league-of-lore.herokuapp.com/`)
       .then((response) => response.json())
       .then(data => {
         setCurrentUser(data)
@@ -36,7 +36,7 @@ function App() {
 
 
   useEffect(()=>{
-    fetch(`http://localhost:3000/champions`)
+    fetch(`https://league-of-lore.herokuapp.com/champions`)
     .then(response => response.json())
     .then((championsArray) => setChampions(championsArray))
   },[])
@@ -45,14 +45,14 @@ function App() {
 
    
   useEffect(()=> {
-    fetch(`http://localhost:3000/regions`)
+    fetch(`https://league-of-lore.herokuapp.com/regions`)
     .then(response => response.json())
     .then((regionsArray)=> setRegions(regionsArray))
   },[])
 
 
   useEffect(()=>{
-    fetch(`http://localhost:3000/user_stories`)
+    fetch(`https://league-of-lore.herokuapp.com/user_stories`)
     .then(response => response.json())
     .then((storyData) => setStories(storyData))
     

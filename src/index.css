@@ -43,7 +43,7 @@ body {
 .login {
   position: absolute;
   display: block;
-  background: url("https://64.media.tumblr.com/5e4b16b9ee6449bb16fddc9099e5bbb5/tumblr_phm1k53y8L1tbrdouo1_500.gifv");
+  background: url("https://media0.giphy.com/media/uV6LlrjVboPiLVZYTX/giphy.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,7 +55,7 @@ body {
 .login-form-box {
   position: relative;
   display: block;
-  border: 5px solid rgba(53, 9, 212, 0.986);
+  border: 5px solid rgba(2, 2, 2, 0.986);
   height: 35%;
   width: 30%;
   margin: 0 auto;
@@ -92,10 +92,10 @@ body {
   text-decoration: none;
   outline: none;
   color: red;
-  background-color: rgba(53, 9, 212, 0.986);
+  background-color: rgba(5, 5, 5, 0.986);
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px rgba(53, 9, 212, 0.986);
+  box-shadow: 0 9px rgba(0, 0, 0, 0.986);
 }
 .input-button:hover{
   background-color: white;
